@@ -1,8 +1,23 @@
-import { createApp } from 'vue';
-import ExampleComponent from './components/ExampleComponent.vue';
+import './bootstrap';
 
-createApp({
+import '../css/app.css';
+
+import { createApp } from 'vue';
+import app from './App.vue';
+import router from './router/index.js';
+// main.js or main.ts
+
+
+
+createApp(app).use(router).mount('#app');
+
+
+
+
+
+
+/*createApp({
     components: {
-        ExampleComponent
+        TestComponent
     }
-}).mount('#app');
+}).mount('#app');*/

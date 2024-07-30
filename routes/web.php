@@ -1,9 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Helpers\DarkmodeHelper;
+use Illuminate\Http\Request;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/{pathMatch}', function(){
+    return view('index');
+})->where('pathMatch', '.*');
