@@ -1,7 +1,7 @@
 <template>
   <PageLayout>
-    <div class="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900">
-      <div class="max-w-md w-full space-y-8 relative">
+    <div class="flex items-center justify-center bg-gray-100 dark:bg-gray-900">
+      <div class="max-w-md w-full space-y-8 relative p-6 bg-white dark:bg-gray-800 shadow-md rounded-lg">
         <!-- Error display -->
         <div v-if="displayError"
           class="absolute top-0 left-0 right-0 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded dark:bg-red-900 dark:border-red-700 dark:text-red-100 flex items-start justify-between"
@@ -11,14 +11,14 @@
               <span class="block sm:inline">{{ error[0] }}</span>
             </li>
           </ul>
-          <button @click="displayError = false" class="flex items-center justify-center text-red-700 dark:text-red-100 h-8 w-8 p-4 ml-4">
+          <button @click="displayError = false" class="flex items-center justify-center text-red-700 dark:text-red-100 h-8 w-8 ml-4">
             <i class="material-icons md-36">
-                close
+              close
             </i>
           </button>
         </div>
 
-        <div class="relative pt-12">
+        <div class="relative pt-16">
           <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900 dark:text-gray-100">
             Sign in to your account
           </h2>
@@ -56,7 +56,7 @@
               </button>
             </div>
           </form>
-          <button @click=getUser()>TEst</button>
+          <button @click="getUser()">Test</button>
         </div>
       </div>
     </div>
@@ -93,9 +93,8 @@ export default {
         });
 
         // Handle successful login
-        console.log('Login successful:', response.data);
-        // Redirect to another page or store the token
-        //this.$router.push('/');
+        //console.log('Login successful:', response.data);
+        window.location.href = '/';
       } catch (error) {
         // Handle error
         console.error('Login failed:', error.response.data.error);
