@@ -7,6 +7,7 @@
       <!-- Main Content -->
       <main class="container mx-auto flex-grow p-4">
         <slot />
+        <router-view />
       </main>
   
       <!-- Footer -->
