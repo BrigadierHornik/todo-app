@@ -37,12 +37,16 @@ export default {
       }
     });
 
+    const logged = document.querySelector('meta[name="logged-in"]').content;
+
     // Provide isDarkMode and toggleDarkMode to child components
     provide('isDarkMode', isDarkMode);
     provide('toggleDarkMode', toggleDarkMode);
+    provide('logged', logged);
 
     return {
       isDarkMode,
+      logged,
     };
   },
 };
