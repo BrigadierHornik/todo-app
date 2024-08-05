@@ -5,7 +5,7 @@
             <ul class="flex space-x-4">
                 <li><router-link to="/" class="hover:text-gray-800 dark:hover:text-gray-300"
                         active-class="dark:text-indigo-400 text-indigo-600">Home</router-link></li>
-                <li><a href="#" class="hover:text-gray-800 dark:hover:text-gray-300">About</a></li>
+                <li v-if="logged"><router-link to="/todo" class="hover:text-gray-800 dark:hover:text-gray-300">Todo</router-link></li>
                 <li>
                     <router-link v-if="logged" to="/logout" class="hover:text-gray-800 dark:hover:text-gray-300"
                         active-class="dark:text-indigo-400 text-indigo-600">Logout</router-link>
