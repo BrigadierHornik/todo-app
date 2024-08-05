@@ -18,12 +18,14 @@ To set up the project, follow these steps:
 2. Navigate to the project directory.
 3. Copy the `.env.example` file to `.env`.
 4. Run `docker compose build` to build the docker image and install all necessary components
-5. Run `./vendor/bin/sail up -d` to start the container and serve the app
-6. Run `./vendor/bin/sail artisan migrate:fresh` to migrate the database.
-7. Run `./vendor/bin/sail artisan db:seed` to seed the database with initial data.
-8. Run `npm install` to install the JavaScript dependencies.
-9. Run `npm run build` to build the frontend assets.
-10. Open up browser and go to localhost now you can navigate the app
+5. Run `docker compose up -d laravel.test` to start it up
+6. Run `docker compose exec laravel.test bash` to get into the container
+7. Run `composer install` and `npm install` to install all needed components then `exit` to get out of there.
+8. Run `./vendor/bin/sail artisan migrate:fresh` to migrate the database.
+9. Run `./vendor/bin/sail artisan db:seed` to seed the database with initial data.
+10. Run `npm install` to install the JavaScript dependencies.
+11. Run `npm run build` to build the frontend assets.
+12. Open up a browser and go to localhost to navigate the app
 
 ## User
 
