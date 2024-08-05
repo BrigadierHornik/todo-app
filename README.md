@@ -23,7 +23,7 @@ To set up the project, follow these steps:
 7. Run `composer install` and `npm install` to install all needed components then `exit` to get out of there.
 8. Run `./vendor/bin/sail artisan migrate:fresh` to migrate the database.
 9. Run `./vendor/bin/sail artisan db:seed` to seed the database with initial data.
-10. Run `npm run build` to build the frontend assets.
+10. Run `./vendor/bin/sail npm run build` to build the frontend assets or `./vendor/bin/sail npm run dev` to start dev server
 11. Open up a browser and go to localhost to navigate the app
 
 ## User
