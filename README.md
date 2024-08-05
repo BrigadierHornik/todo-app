@@ -18,20 +18,19 @@ To set up the project, follow these steps:
 2. Navigate to the project directory.
 3. Copy the `.env.example` file to `.env`.
 4. Run `docker compose build` to build the docker image and install all necessary components
-5. Run `docker compose up -d laravel.test` to start it up
+5. Run `docker compose up -d` to start it up
 6. Run `docker compose exec laravel.test bash` to get into the container
 7. Run `composer install` and `npm install` to install all needed components then `exit` to get out of there.
 8. Run `./vendor/bin/sail artisan migrate:fresh` to migrate the database.
 9. Run `./vendor/bin/sail artisan db:seed` to seed the database with initial data.
-10. Run `npm install` to install the JavaScript dependencies.
-11. Run `npm run build` to build the frontend assets.
-12. Open up a browser and go to localhost to navigate the app
+10. Run `npm run build` to build the frontend assets.
+11. Open up a browser and go to localhost to navigate the app
 
 ## User
 
 To access the application, use the following credentials:
 
-- Username: `user@test`
+- Username: `test@test`
 - Password: `test123`
 
 You can copy the credentials by selecting the text and using the copy function of your operating system.
