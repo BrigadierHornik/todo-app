@@ -56,7 +56,6 @@
               </button>
             </div>
           </form>
-          <button @click="getUser()">Test</button>
         </div>
       </div>
     </div>
@@ -105,14 +104,6 @@ export default {
 
       }
     },
-    async getUser() {
-      try {
-        const response = await axios.get('/api/user');
-        console.log('User:', response.data);
-      } catch (error) {
-        console.error('Failed to get user:', error.response.data.error);
-    }
-  }
 }
 };
 
